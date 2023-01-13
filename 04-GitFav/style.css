@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff-primary: font-family: 'Roboto', sans-serif;
+    --color-primary: #fff;
+    --bg-color: #000000;
+    --bg-button: #065E7C;
+    --bg--thead: #092D38;
+}
+
+.hide {
+    display: none;
+}
+
+body {        
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    color: var(--color-primary);
+    background: var(--bg-color);
+    display: grid;
+}
+
+.sr-only { /* desaparecer com o objeto dentro da tela */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden; /* deixa o conteudo dentro da caixa*/
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#app {
+    justify-self: center;
+    margin-top: 7rem;
+}
+header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 29.6rem;
+    margin-bottom: 8.7rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input {
+    border: none;
+    padding: 1.6rem;
+    height: 4.8rem;
+    width: 46.2rem;
+    background: #06181C;
+    color: #7C7C8A;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.serch {
+    border-radius: 5px;
+    font-family: 'Roboto';    
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.rem;
+    color: #fff;
+    padding: 1.2rem 3.2rem;
+    background: var(--bg-button);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.serch:hover{
+    background-color: #308ba9;
+}
+
+.table-wrapper {
+    border: 1px solid #4A808C;
+    border-radius: 1.2rem;
+    margin-bottom: 11.6rem;
+    flex-wrap: wrap;
+    max-height: 624px; 
+    overflow: auto;
+    
+}
+
+table * {
+    font-family: 'Roboto'; 
+    font-size: 2rem;   
+    color: #E1E1E6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;/*tira a separação das linhas da tabela*/
+    top: 0;
+}
+
+table th {
+    position: sticky;
+    top: 0;
+    background: var(--bg--thead);
+    padding:1.6rem ;
+    padding-left: 4rem;
+    text-align: left;
+}
+
+table th:first-child {
+    border-top-left-radius: 1.2rem;
+    width: 504px;    
+}
+
+table th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+
+table td:first-child {
+    border-bottom-left-radius: 1.2rem;     
+}
+
+
+table tr:nth-child(odd) { /*odd é "tipo" IMPAR/ e a palavra even é para PAR*/
+    background: rgba(6, 22, 27, 0.5);
+}
+
+tbody tr {
+    
+    background: #06181C;
+    border-top: 1px solid #4A808C;
+}
+
+table td {
+    padding: 2.4rem;
+    padding-left: 4rem;
+}
+
+h1 {
+    font-family: 'Roboto Mono';
+    font-size: 40px;
+    color: #4E5455;;
+}
+
+.user {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.user img {
+    width: 5.6rem;
+    height: 5.6rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user a {
+    text-decoration: none
+}
+
+.user a p {
+    font-weight: 700;
+}
+
+.user a span {
+    font-weight: 400;
+}
+
+td button {
+    border: none;
+    font-weight: 700;
+    background: none;
+    color: #F75A68;
+    cursor: pointer;
+}
+
+td button:hover {
+    scale: 1.1;
+}
+
+.empty{
+    align-items: center;
+    text-align: center;
+    height: 62.4rem;
+    background: #030B0D;
+}
+
+tbody h1,
+tbody img {
+  vertical-align: middle;
+  margin-left: 6rem;
+  display: inline-flex;
+}
+
+
+
+::-webkit-scrollbar {
+    width: .6rem;
+  }
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 1.2rem;
+    background-color: #4A808C;
+}
